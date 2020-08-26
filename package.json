@@ -1,0 +1,23 @@
+{
+  "name": "monorepo-react",
+  "private": "true",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "workspaces": [
+    "packages/**"
+  ],
+  "scripts": {
+    "run:web": "lerna --scope=react-apps run start",
+    "test": "lerna run test",
+    "test:pack": "lerna run test --scope=@muhi-ui/shared",
+    "update:pack": "lerna updated",
+    "clean": "rm -rf node_modules",
+    "reset": "yarn run clean && yarn",
+    "new-version": "lerna version --convetional-commits --yes",
+    "diff": "lerna diff"
+  },
+  "devDependencies": {
+    "lerna": "^3.22.1"
+  }
+}
