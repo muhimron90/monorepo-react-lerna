@@ -1,13 +1,10 @@
 import React from 'react';
-import shared from '@muhi-ui/shared';
+
+import Button from 'muhi-ui';
 import './App.css';
 
 function App() {
-  return (
-    <div className="App">
-    {console.log(shared())}
-    </div>
-  );
+  return <div className="App"><Button text="hellow" /></div>;
 }
 
 export default App;

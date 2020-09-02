@@ -9,13 +9,15 @@
   ],
   "scripts": {
     "run:web": "lerna --scope=react-apps run start",
+    "run:comp": "lerna --scope=muhi-ui run start",
     "test": "lerna run test",
-    "test:pack": "lerna run test --scope=@muhi-ui/shared",
+    "test:pack": "lerna run test --scope=muhi-ui",
     "update:pack": "lerna updated",
     "clean": "rm -rf node_modules",
     "reset": "yarn run clean && yarn",
     "new-version": "lerna version --convetional-commits --yes",
-    "diff": "lerna diff"
+    "diff": "lerna diff",
+    "npm:install": "lerna exec npm install"
   },
   "devDependencies": {
     "lerna": "^3.22.1"
